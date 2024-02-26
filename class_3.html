@@ -20,10 +20,14 @@ let snp_data = [{"Date":"2/16/24","Close":5005.57},{"Date":"2/15/24","Close":502
 
 let day_change = [];
 
-
-console.log(day_change); 
+for (let i = 0; i < snp_data.length - 1; i++) {
+    let change = snp_data[i]['Close'] - snp_data[i + 1]['Close'];
+    day_change.push({ date: snp_data[i]['Date'], change: change });
+}
+console.log(day_change);
 
 </script>
 
 </body>
 </html>
+
